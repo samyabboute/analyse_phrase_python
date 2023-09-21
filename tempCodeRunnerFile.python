@@ -1,0 +1,27 @@
+# Demande à l'utilisateur de saisir une phrase
+phrase = input("Entrez une phrase : ")
+
+# Divise la phrase en mots en utilisant l'espace comme séparateur
+mots = phrase.split()
+
+# Compte le nombre de mots dans la phrase
+nombre_de_mots = len(mots)
+
+# Compte le nombre total de caractères (y compris les espaces)
+nombre_de_caracteres = len(phrase)
+
+# Calcul de la longueur moyenne des mots
+longueur_moyenne_des_mots = nombre_de_caracteres / nombre_de_mots
+
+# Trouve le mot le plus long dans la phrase
+mot_le_plus_long = max(mots, key=len)
+
+# Trie les mots dans l'ordre alphabétique
+mots_tries = sorted(mots)
+
+# Affiche les résultats
+print(f"Nombre de mots dans la phrase : {nombre_de_mots}")
+print(f"Nombre de caractères dans la phrase : {nombre_de_caracteres}")
+print(f"Longueur moyenne des mots : {longueur_moyenne_des_mots:.2f} caractères")
+print(f"Mot le plus long : {mot_le_plus_long}")
+print(f"Mots dans l'ordre alphabétique : {', '.join(mots_tries)}")
